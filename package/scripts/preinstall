@@ -1,0 +1,11 @@
+#!/bin/sh
+# Cleans-up after the old HoRDNIS installations.
+# These would install into both /Library/Extensions and
+# /System/Library/Extensions, while we only use the former location.
+if [ -e /System/Library/Extensions/HoRNDIS.kext ]; then
+  rm -rf /System/Library/Extensions/HoRNDIS.kext
+fi
+if [ -e /Library/Extensions/HoRNDIS.kext ]; then
+  rm -rf /Library/Extensions/HoRNDIS.kext
+fi
+exit 0
