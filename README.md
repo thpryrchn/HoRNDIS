@@ -38,6 +38,8 @@ sudo kextload /Library/Extensions/HoRNDIS.kext
 * Simply running xcodebuild in the checkout directory should be sufficient to build the kext.
 * If you wish to package it up, you can run `make` to assemble the package in the build/ directory
 
+** For Big Sur to work, you need to boot in recovery mode. On an M1 mac, hold down the power button, until it gives you options. Then select the options tab. Then it will ask for you to select a user to unlock the drive. After that, under the utilities bar on the top, select terminal. then type in `csrutil enable --without kext` for it to allow unsigned kext's. Then install from build/pkg/HoRNDIS-kext.pkg, and enable from System Preferences, Security & Privacy. Then it will have you reboot. You should be good after that :)
+
 ## Debugging and Development Notes
 
 This sections contains tips and tricks for developing and debugging the driver.
